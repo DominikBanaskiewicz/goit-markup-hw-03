@@ -1,5 +1,6 @@
 h1,
 h2,
+h3,
 p,
 ul {
   font-style: normal;
@@ -183,7 +184,6 @@ MAIN CONTENT
 .main-content {
   display: flex;
   flex-direction: column;
-  gap: 94px;
 }
 .main-content-list {
   display: flex;
@@ -364,7 +364,6 @@ footer {
   align-items: flex-start;
 }
 .portfolio-main-list-elem-text {
-  padding: auto;
   padding: 20px 24px;
 }
 .portfolio-main-list-elem h3 {
