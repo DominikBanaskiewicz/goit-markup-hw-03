@@ -1,8 +1,13 @@
-* {
+h1,
+h2,
+p,
+ul {
   font-style: normal;
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
 }
 :root {
   --brand-blue-color: #2196f3;
@@ -16,10 +21,16 @@
   --railway-font: "Railway";
 }
 .container {
-  width: 1600px;
+  width: 1200px;
   display: flex;
-  justify-items: stretch;
-  align-items: stretch;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  padding: auto;
+}
+.section {
+  padding: 94px 0px 94px 0px;
 }
 body {
   font-family: "Roboto", "Railway", sans-serif;
@@ -27,26 +38,28 @@ body {
   width: 1600px;
   margin: auto;
 }
+
 /* 
     header i nav
 */
+body .main-banner {
+  width: 1600px;
+}
 .page-header {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 4px;
-  max-width: 1600px;
+  flex-direction: row;
+  align-self: stretch;
+  justify-content: space-between;
+  border: 1px;
+  border-style: solid;
+  border-color: rgba(236, 236, 236, 1);
 }
 .webstudio-main {
-  margin-left: 215px;
-
-  justify-items: stretch;
+  text-decoration: none;
+  border: #212121;
 }
 .main-page-logo-blue {
   color: var(--brand-blue-color);
-}
-.container .nav {
-  justify-self: right;
 }
 .nav {
   display: flex;
@@ -56,14 +69,10 @@ body {
   list-style: none;
   border-radius: 4px;
   display: flex;
-  margin: 0px;
-  margin-left: 53px;
+  padding-left: 93px;
 }
 .nav-menu-elem {
   display: block;
-}
-.nav-menu .header-contact-list {
-  display: flex;
 }
 .header-contact-list
   .header-contact-list-elem:not(:last-child):not(:last-child) {
@@ -75,10 +84,11 @@ body {
 .header-contact-list {
   display: flex;
   align-items: center;
-  margin-left: auto;
-  padding-right: 217px;
 }
-
+.main-email,
+.main-phone {
+  text-decoration: none;
+}
 .webstudio-main,
 .webstudio-footer {
   font-family: var(--railway-font);
@@ -96,20 +106,17 @@ body {
 }
 
 .nav-menu-link-blue {
-  text-decoration-line: none;
   color: var(--brand-blue-color);
   font-size: 14px;
   font-weight: 500;
   line-height: 1.17;
 }
 .nav-menu-link {
-  text-decoration-line: none;
   color: black;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.17;
-}
-.nav-menu-link {
+  text-decoration: none;
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -130,14 +137,9 @@ body {
   line-height: 1.17;
   color: var(--grey-font-color);
 }
-.nav-menu-elem-contacts {
-}
 
 /* MAIN */
-main .container {
-  display: flex;
-  max-width: 1600px;
-}
+
 .btn-zamow-usluge {
   cursor: pointer;
   background-color: var(--brand-blue-color);
@@ -160,21 +162,17 @@ h1 {
   line-height: 1.36;
   width: 696px;
   text-align: center;
-  margin: 0px;
-  letter-spacing: 0.6tpx;
+  letter-spacing: 0.6px;
 }
 .main-banner {
-  height: 600px;
   background-color: var(--background-dark-color);
+  min-height: 412px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-main .container {
-  display: flex;
-  flex-direction: column;
-}
+
 /* 
 
 MAIN CONTENT
@@ -182,25 +180,14 @@ MAIN CONTENT
 */
 .main-content-list {
   display: flex;
-  margin: 0px;
-  padding: 0px;
   align-items: center;
   justify-content: center;
-  padding-top: 94px;
-  column-gap: 30px;
-  padding-left: 215px;
-  padding-right: 215px;
+  gap: 10px;
 }
 .main-content-list-elem {
   justify-items: stretch;
 }
 
-.main-content-list,
-.about-us-list,
-.our-team-list,
-.portfolio-main-list {
-  list-style: none;
-}
 .main-content-list-elem > h3 {
   font-weight: 700;
   font-size: 14px;
@@ -213,8 +200,6 @@ MAIN CONTENT
   font-size: 14px;
   line-height: 1.7;
   color: var(--grey-font-color);
-  margin: 0px;
-  height: 75px;
   letter-spacing: 0.3px;
   max-width: 270px;
 }
@@ -226,24 +211,20 @@ MAIN CONTENT
  */
 .about-us h2 {
   text-align: center;
-  flex-direction: row;
-  padding-top: 94px;
   padding-bottom: 50px;
-  margin: 0px;
 }
 .about-us-list {
   display: flex;
-  justify-content: center;
   column-gap: 30px;
-  margin: 0px;
-  padding: 0px;
-  padding-bottom: 94px;
 }
 /* 
 
 OUR TEAM 
 
 */
+body .our-team {
+  width: 1600px;
+}
 .our-team > h2,
 .about-us > h2 {
   font-size: 36px;
@@ -253,9 +234,7 @@ OUR TEAM
 }
 .our-team h2 {
   text-align: center;
-  padding-top: 94px;
   padding-bottom: 50px;
-  margin: 0px;
 }
 
 .our-team {
@@ -265,12 +244,10 @@ OUR TEAM
 }
 .our-team-list {
   display: flex;
-  margin: 0px;
 }
 .our-team-list {
   justify-content: center;
   column-gap: 30px;
-  padding-bottom: 94px;
 }
 .our-team-elem {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -306,7 +283,8 @@ footer {
 
 .webstudio-footer {
   color: var(--white-color);
-  padding: 60px 1240px 20px 215px;
+  padding: 0px 1240px 20px 215px;
+  text-decoration: none;
 }
 .footer-adress {
   color: var(--white-color);
@@ -317,13 +295,11 @@ footer {
 }
 .footer-email,
 .footer-phone {
+  text-decoration: none;
   color: #ffffff60;
   font-size: 14px;
   padding: 0px 1240px 9px 215px;
   display: flex;
-}
-.footer-phone {
-  padding-bottom: 60px;
 }
 
 /* PORTFOLIO  */
@@ -332,14 +308,18 @@ footer {
   border-radius: 4px;
   border-style: none;
   background: #f5f4fa;
-  border-color: #f5f4fa;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.7;
   color: var(--almost-black-font-color);
   padding: 6px 22px;
 }
-
+.portfolio-buttons {
+  display: flex;
+  column-gap: 8px;
+  justify-content: center;
+  padding-bottom: 50px;
+}
 .portfolio-buttons-elem:focus {
   border-color: var(--background-dark-color);
 }
@@ -350,14 +330,29 @@ footer {
   border-style: none;
   cursor: pointer;
 }
+.portfolio-main-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
 .portfolio-main-list-elem {
+  max-width: 370px;
+  max-height: 404px;
+  flex-basis: calc((100% - (2 * 30px)) / 3);
   border: 1px solid #eee;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 .portfolio-main-list-elem h3 {
-  font-size: 18px;
+  font-size: 16px;
   color: var(--almost-black-font-color);
-  font-weight: 700;
-  line-height: 2;
+  font-weight: 500;
+  line-height: 1.875;
 }
 .portfolio-main-list-elem p {
   font-size: 16px;
@@ -365,9 +360,6 @@ footer {
   font-weight: 400;
   line-height: 1.875;
 }
-.portfolio-main-list-elem h3 {
-  font-size: 16px;
-  color: var(--almost-black-font-color);
-  font-weight: 500;
-  line-height: 1.875;
+.footer-email-portfolio {
+  text-decoration: underline;
 }
